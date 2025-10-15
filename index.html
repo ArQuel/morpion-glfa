@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion - Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Morpion</h1>
+        
+        <div class="game-info">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Joueur (X)</span>
+                    <span class="score" id="player-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Égalité</span>
+                    <span class="score" id="tie-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">IA (O)</span>
+                    <span class="score" id="ai-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <h3>Choisissez la difficulté:</h3>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn active" data-difficulty="easy">
+                    Facile
+                </button>
+                <button class="difficulty-btn" data-difficulty="medium">
+                    Moyen
+                </button>
+                <button class="difficulty-btn" data-difficulty="hard">
+                    Difficile
+                </button>
+            </div>
+        </div>
+
+        <div class="game-board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="status" id="status">Votre tour ! (X)</div>
+
+        <div class="controls">
+            <button class="btn-reset" id="reset-btn">Nouvelle Partie</button>
+            <button class="btn-reset-score" id="reset-score-btn">Réinitialiser Score</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
