@@ -48,6 +48,9 @@ function init() {
 
   loadScores();
   updateScoreDisplay();
+
+  // Initialiser avec un premier joueur aléatoire
+  resetGame();
 }
 
 function handleCellClick(e) {
@@ -267,14 +270,24 @@ function checkWinner() {
 
 function resetGame() {
   board = ["", "", "", "", "", "", "", "", ""];
-  currentPlayer = "X";
+  // Choisir aléatoirement qui commence
+  currentPlayer = Math.random() < 0.5 ? "X" : "O";
   gameActive = true;
-  statusDisplay.textContent = "Votre tour ! (X)";
 
   cells.forEach((cell) => {
     cell.textContent = "";
     cell.classList.remove("x", "o", "taken", "winner");
   });
+
+  if (currentPlayer === "X") {
+    statusDisplay.textContent = "Votre tour ! (X)";
+  } else {
+    statusDisplay.textContent = "L'IA commence... (O)";
+    // L'IA joue en premier
+    setTimeout(() => {
+      aiMove();
+    }, 500);
+  }
 }
 
 function resetScore() {
