@@ -21,9 +21,9 @@ body {
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
-    width: 600px;
-    max-height: 900px;
+    max-width: 400px;
+    width: 400px;
+    max-height: 700px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -32,21 +32,21 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 15px;
-    font-size: 32px;
+    margin-bottom: 12px;
+    font-size: 24px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .game-info {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .score-board {
     display: flex;
     justify-content: space-around;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 12px;
-    border-radius: 15px;
+    padding: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -58,41 +58,41 @@ h1 {
 }
 
 .score-item .label {
-    font-size: 13px;
+    font-size: 11px;
     color: #666;
     font-weight: 600;
 }
 
 .score-item .score {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: #667eea;
 }
 
 .difficulty-selector {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .difficulty-selector h3 {
     color: #333;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .difficulty-buttons {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .difficulty-btn {
-    padding: 8px 16px;
+    padding: 6px 12px;
     border: 2px solid #e0e0e0;
     background: white;
-    border-radius: 10px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -112,12 +112,12 @@ h1 {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-    margin-bottom: 25px;
-    width: 400px;
-    height: 400px;
+    grid-template-columns: repeat(3, 76px);
+    grid-template-rows: repeat(3, 76px);
+    gap: 6px;
+    margin-bottom: 15px;
+    width: 240px;
+    height: 240px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -125,18 +125,21 @@ h1 {
 .cell {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1;
-    width: 100%;
-    height: 100%;
+    width: 76px;
+    height: 76px;
+    max-width: 76px;
+    max-height: 76px;
+    min-width: 76px;
+    min-height: 76px;
 }
 
 .cell:hover:not(.taken) {
@@ -182,29 +185,29 @@ h1 {
 
 .status {
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 12px;
-    margin-top: 38px;
-    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding: 8px;
     background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .controls {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .btn-reset, .btn-reset-score {
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
-    border-radius: 10px;
-    font-size: 15px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -230,102 +233,104 @@ h1 {
 
 @media (max-width: 600px) {
     .container {
-        padding: 15px;
-        width: 100%;
-        max-width: 400px;
+        padding: 12px;
+        width: 320px;
+        max-width: 100%;
     }
 
     h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 8px;
     }
 
     .game-board {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     .cell {
-        font-size: 32px;
+        font-size: 24px;
     }
 
     .difficulty-selector h3 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .difficulty-btn {
-        padding: 6px 12px;
-        font-size: 13px;
+        padding: 5px 10px;
+        font-size: 11px;
     }
 
     .status {
-        font-size: 16px;
-        padding: 8px;
+        font-size: 12px;
+        padding: 6px;
     }
 
     .btn-reset, .btn-reset-score {
-        padding: 8px 16px;
-        font-size: 13px;
+        padding: 6px 12px;
+        font-size: 11px;
     }
 }
 
 @media (max-height: 700px) {
     .container {
-        padding: 12px;
+        padding: 10px;
+        max-height: 650px;
     }
 
     h1 {
-        font-size: 24px;
-        margin-bottom: 8px;
+        font-size: 20px;
+        margin-bottom: 6px;
     }
 
     .game-info {
-        margin-bottom: 10px;
-    }
-
-    .score-board {
-        padding: 8px;
-    }
-
-    .score-item .score {
-        font-size: 20px;
-    }
-
-    .difficulty-selector {
-        margin-bottom: 10px;
-    }
-
-    .difficulty-selector h3 {
-        font-size: 14px;
         margin-bottom: 8px;
     }
 
+    .score-board {
+        padding: 6px;
+    }
+
+    .score-item .score {
+        font-size: 16px;
+    }
+
+    .difficulty-selector {
+        margin-bottom: 8px;
+    }
+
+    .difficulty-selector h3 {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
     .difficulty-btn {
-        padding: 6px 12px;
-        font-size: 13px;
+        padding: 5px 10px;
+        font-size: 11px;
     }
 
     .game-board {
-        width: 300px;
-        height: 300px;
-        margin-bottom: 10px;
-        gap: 6px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 8px;
+        gap: 5px;
     }
 
     .cell {
-        font-size: 32px;
-        border-radius: 8px;
+        font-size: 24px;
+        border-radius: 6px;
     }
 
     .status {
-        font-size: 15px;
-        padding: 8px;
-        margin-bottom: 10px;
+        font-size: 12px;
+        padding: 6px;
+        margin-bottom: 8px;
+        margin-top: 10px;
     }
 
     .btn-reset, .btn-reset-score {
-        padding: 8px 16px;
-        font-size: 13px;
+        padding: 6px 12px;
+        font-size: 11px;
     }
 }
 
